@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenvira — Business Innovation & AI Studio</title>
+  <meta name="description" content="Zenvira — The Business Innovation & AI Studio.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "sans-serif"] },
+          keyframes: {
+            gradient: {
+              "0%,100%": { backgroundPosition: "0% 50%" },
+              "50%": { backgroundPosition: "100% 50%" }
+            }
+          },
+          animation: { gradient: "gradient 4s ease infinite" }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, sans-serif; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(148,163,184,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.035) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg,#34d399,#22d3ee,#67e8f9,#34d399);
+      background-size: 300% 300%;
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .gradient-btn {
+      background: linear-gradient(90deg,#34d399,#06b6d4,#22d3ee,#34d399);
+      background-size:300% 300%;
+    }
+    .glass {
+      background:rgba(15,23,42,.72);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden bg-slate-900 text-white antialiased">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-emerald-400/10 blur-[140px]"></div>
+    <div class="absolute -right-40 top-40 h-[550px] w-[550px] rounded-full bg-cyan-500/10 blur-[160px]"></div>
+    <div class="absolute inset-0 grid-bg"></div>
+  </div>
+
+  <header id="navbar" class="glass fixed left-0 right-0 top-0 z-50 border-b border-white/[.06]">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-400/20 bg-slate-800">
+          <span class="text-lg font-extrabold gradient-text">Z</span>
+        </div>
+        <span class="text-xl font-bold">Zen<span class="text-emerald-400">vira</span></span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#services" class="text-sm text-slate-300 hover:text-emerald-400">Services</a>
+        <a href="#ecosystem" class="text-sm text-slate-300 hover:text-emerald-400">Ecosystem</a>
+        <a href="#contact" class="text-sm text-slate-300 hover:text-emerald-400">Contact</a>
+        <a href="#contact" class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2.5 text-sm font-semibold text-emerald-300 hover:bg-emerald-400/20">Start a Project</a>
+      </div>
+
+      <button id="menuButton" aria-label="Open menu" class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 md:hidden">
+        ☰
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t border-white/[.06] bg-slate-900/95 px-5 py-5 md:hidden">
+      <div class="flex flex-col gap-2">
+        <a href="#services" class="mobile-link rounded-xl px-4 py-3 text-slate-300 hover:bg-white/5">Services</a>
+        <a href="#ecosystem" class="mobile-link rounded-xl px-4 py-3 text-slate-300 hover:bg-white/5">Ecosystem</a>
+        <a href="#contact" class="mobile-link rounded-xl px-4 py-3 text-slate-300 hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section id="home" class="flex min-h-screen items-center px-5 pb-20 pt-32 sm:px-8 lg:px-10">
+      <div class="mx-auto w-full max-w-7xl text-center">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/[.07] px-4 py-2 text-xs font-semibold uppercase tracking-[.18em] text-emerald-300">
+            <span class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
+            Business Innovation & AI Studio
+          </div>
+
+          <h1 class="text-5xl font-extrabold leading-[1.05] tracking-[-.04em] sm:text-6xl lg:text-7xl">
+            Ideas transformed into
+            <span class="gradient-text animate-gradient">intelligent growth.</span>
+          </h1>
+
+          <p class="mx-auto mt-7 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg lg:text-xl">
+            Zenvira is <strong class="text-slate-200">The Business Innovation & AI Studio</strong>
+            helping modern organizations automate smarter, understand data, build meaningful brands,
+            accelerate growth and prepare teams for an AI-powered future.
+          </p>
+
+          <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <a href="#ecosystem" class="gradient-btn animate-gradient rounded-full px-7 py-4 text-sm font-bold text-slate-950 shadow-[0_0_40px_rgba(52,211,153,.18)] transition hover:-translate-y-1">
+              Explore Zenvira →
+            </a>
+            <a href="#contact" class="rounded-full border border-white/10 bg-white/[.04] px-7 py-4 text-sm font-semibold text-slate-200 hover:border-cyan-400/30">
+              Let's Build Something
+            </a>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-4 border-t border-white/[.07] pt-9 md:grid-cols-4">
+          <div><p class="gradient-text text-2xl font-bold">AI</p><p class="text-xs text-slate-500">Automation</p></div>
+          <div><p class="gradient-text text-2xl font-bold">Data</p><p class="text-xs text-slate-500">Intelligence</p></div>
+          <div><p class="gradient-text text-2xl font-bold">Brand</p><p class="text-xs text-slate-500">Creativity</p></div>
+          <div><p class="gradient-text text-2xl font-bold">Growth</p><p class="text-xs text-slate-500">Strategy</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="px-5 py-24 sm:px-8 lg:px-10">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-emerald-400">What We Build</p>
+        <h2 class="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+          Innovation without the <span class="gradient-text">complexity.</span>
+        </h2>
+        <p class="mt-5 leading-7 text-slate-400">Technology, intelligence, design, strategy and education — connected in one ecosystem.</p>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="px-5 pb-28 sm:px-8 lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10">
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-cyan-400">The Zenvira Ecosystem</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Five pillars. <span class="text-slate-500">One vision.</span></h2>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+          <article class="group rounded-3xl border border-white/[.08] bg-slate-800/40 p-7 transition hover:-translate-y-2 hover:border-emerald-400/30 lg:col-span-2">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 text-xl">✦</div>
+            <p class="mt-9 text-xs font-semibold uppercase tracking-[.2em] text-emerald-400">Automation</p>
+            <h3 class="mt-2 text-2xl font-bold">Zenvira AI</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">AI assistants, intelligent workflows and practical automation that reduce repetitive work.</p>
+            <p class="mt-7 text-sm font-semibold text-emerald-300">Build smarter systems →</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/[.08] bg-slate-800/40 p-7 transition hover:-translate-y-2 hover:border-cyan-400/30 lg:col-span-2">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 text-xl">◈</div>
+            <p class="mt-9 text-xs font-semibold uppercase tracking-[.2em] text-cyan-400">Data</p>
+            <h3 class="mt-2 text-2xl font-bold">Zenvira Insights</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">Dashboards, analytics and decision intelligence that turn raw data into actionable insights.</p>
+            <p class="mt-7 text-sm font-semibold text-cyan-300">Understand your data →</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/[.08] bg-slate-800/40 p-7 transition hover:-translate-y-2 hover:border-emerald-400/30 lg:col-span-2">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 text-xl">✧</div>
+            <p class="mt-9 text-xs font-semibold uppercase tracking-[.2em] text-emerald-400">Branding</p>
+            <h3 class="mt-2 text-2xl font-bold">Zenvira Creative</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">Brand identities, digital experiences and creative systems that make businesses memorable.</p>
+            <p class="mt-7 text-sm font-semibold text-emerald-300">Create your identity →</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/[.08] bg-slate-800/40 p-7 transition hover:-translate-y-2 hover:border-cyan-400/30 lg:col-span-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 text-xl">↗</div>
+            <p class="mt-9 text-xs font-semibold uppercase tracking-[.2em] text-cyan-400">Strategy</p>
+            <h3 class="mt-2 text-2xl font-bold">Zenvira Growth</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">Business strategy, digital positioning and growth systems built around sustainable execution.</p>
+            <p class="mt-7 text-sm font-semibold text-cyan-300">Accelerate growth →</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/[.08] bg-slate-800/40 p-7 transition hover:-translate-y-2 hover:border-emerald-400/30 lg:col-span-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 text-xl">◇</div>
+            <p class="mt-9 text-xs font-semibold uppercase tracking-[.2em] text-emerald-400">Training</p>
+            <h3 class="mt-2 text-2xl font-bold">Zenvira Academy</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">Practical AI, digital and business training for future-ready students, professionals and teams.</p>
+            <p class="mt-7 text-sm font-semibold text-emerald-300">Upgrade your skills →</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-5 pb-28 sm:px-8 lg:px-10">
+      <div class="mx-auto max-w-7xl rounded-[2rem] border border-white/[.08] bg-slate-800/50 px-6 py-16 text-center sm:px-10 lg:py-24">
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-emerald-400">Build What's Next</p>
+        <h2 class="mx-auto mt-4 max-w-3xl text-3xl font-bold sm:text-4xl lg:text-5xl">
+          Your next idea deserves more than <span class="gradient-text">ordinary execution.</span>
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl leading-7 text-slate-400">
+          Explore AI, improve your brand, understand your data or build a new venture with Zenvira.
+        </p>
+        <a href="mailto:hello@zenvira.com" class="gradient-btn animate-gradient mt-9 inline-flex rounded-full px-8 py-4 text-sm font-bold text-slate-950">
+          hello@zenvira.com →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/[.07] bg-slate-950/40 px-5 py-10 sm:px-8 lg:px-10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 sm:flex-row">
+      <div>
+        <p class="text-lg font-bold">Zen<span class="text-emerald-400">vira</span></p>
+        <p class="mt-2 text-xs text-slate-500">© <span id="year"></span> Zenvira. All rights reserved.</p>
+      </div>
+      <div class="flex gap-5 text-sm text-slate-400">
+        <a href="#" class="hover:text-emerald-400">LinkedIn</a>
+        <a href="#" class="hover:text-cyan-400">Instagram</a>
+        <a href="#" class="hover:text-emerald-400">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+  </script>
+</body>
+</html>
